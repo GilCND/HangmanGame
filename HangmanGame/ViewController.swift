@@ -121,7 +121,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnTryClicked(_ sender: UIButton) {
-        if textBox.text == ""{
+        if textBox.text == "" {
             alertMsg(title: "Error", message: "Please type something")
         } else {
             guard var typed = textBox.text?.uppercased() else { return }
