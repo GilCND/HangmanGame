@@ -47,14 +47,17 @@ class ViewController: UIViewController {
     }
     
     private func divideLetters() {
-        selectedWord = words[1]
+        selectedWord = words[0]
         numberOfLetters = selectedWord.count
         letters = Array(selectedWord)
         questionMark.removeAll()
         correctWord.text = ""
         for index in 0...numberOfLetters-1 {
             questionMark.append("?")
-            correctWord.text! += questionMark[index]
+            if correctWord.text == nil { return } else {
+                correctWord.text! += questionMark[index]
+            }
+            
         }
     }
     
@@ -138,7 +141,7 @@ class ViewController: UIViewController {
                                 rightTempLetter += item
                             }
                             correctWord.text = rightTempLetter
-                            if questionMark.contains("?"){ } else {
+                            if questionMark.contains("?") == false {
                                 victory()
                             }
                         }
