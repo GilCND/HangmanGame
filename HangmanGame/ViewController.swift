@@ -52,7 +52,7 @@ class ViewController: UIViewController {
         letters = Array(selectedWord)
         questionMark.removeAll()
         correctWord.text = ""
-        for index in 0...numberOfLetters-1{
+        for index in 0...numberOfLetters-1 {
             questionMark.append("?")
             correctWord.text! += questionMark[index]
         }
